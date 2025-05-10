@@ -1,5 +1,5 @@
 [template]
-template-dir = "template_files"
+sub_templates = ["blender"]
 
 [placeholders]
 
