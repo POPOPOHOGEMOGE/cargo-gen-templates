@@ -1,0 +1,29 @@
+﻿# Blender auto-generated files
+*.blend1
+*.blend2
+*.blend#
+*.blend.autosave
+*.bphys
+
+# Cache directory (generated content)
+# If you want to keep the Cache directory itself but ignore its contents:
+Cache/*
+!Cache/.gitkeep
+
+# Output directory (renderings, exports)
+# If you want to keep the Output directory itself but ignore its contents:
+Output/*
+!Output/.gitkeep
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.pyc
