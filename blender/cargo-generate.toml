@@ -1,6 +1,10 @@
 [template]
 
 [placeholders]
+use_mcp = { type = "bool", prompt = "Blender MCP を使いますか? (.mcp.json / MCP_SETUP.md を含める)", default = true }
+
+[conditional.'use_mcp == false']
+ignore = [".mcp.json", "MCP_SETUP.md"]
 
 #将来的に追加するプレースホルダの例、備忘
 #blender-file-name = { type = "string", prompt = "What is the name of your Blender file name?", default = "MyBlenderFile" }
