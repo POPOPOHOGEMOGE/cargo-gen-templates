@@ -12,8 +12,8 @@ ARP の Remap パネル → Import Config で読み込めば、このプロジ�
 - GUI で使う場合: Import Config 後、ボーンリストで `mixamorig:Hips` の行を選択し
   **Set as Root にチェックを入れてから** Retarget する
 - 忘れるとルートモーション(移動)が乗らず、その場で関節だけ動くアニメになる
-- スクリプトから使う場合は `bones_map_v2` の `mixamorig:Hips` 行に `set_as_root = True` を
-  毎回設定すること(3d-to-sprite プロジェクトの `Scripts/build_char_glb.py` が実装例)
+- スクリプトから使う場合は Import Config 後に `bones_map_v2` の `mixamorig:Hips` 行へ
+  `set_as_root = True` を毎回設定すること
 
 ### 由来メモ
 
