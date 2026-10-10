@@ -16,12 +16,12 @@
 `.mcp.json` はユーザーグローバルにインストールされた `blender-mcp` コマンドを呼び出す前提です。未インストールの環境では以下を実行してください:
 
 ```powershell
-uv tool install --from "git+https://projects.blender.org/lab/blender_mcp.git@98b0e49d98321d321c7e631389200f513f765d59#subdirectory=mcp" blender-mcp
+uv tool install --from "git+https://projects.blender.org/lab/blender_mcp.git@v1.0.3#subdirectory=mcp" blender-mcp
 ```
 
 - 実行ファイルは uv の bin ディレクトリ(例: `C:\Users\<ユーザー名>\.local\bin\blender-mcp.exe`)に置かれます
 - 依存パッケージは uv 管理の隔離された venv に閉じるので、他の Python 環境を汚しません
-- 更新したいときはコミットハッシュを新しいものに差し替えて `uv tool install --force ...` を再実行
+- 更新したいときはタグ(例: `@v1.0.3`)を新しいものに差し替えて `uv tool install --force ...` を再実行
 
 ## uv tool install を使いたくない場合の代替(uvx 直接起動)
 
@@ -31,7 +31,7 @@ uv tool install --from "git+https://projects.blender.org/lab/blender_mcp.git@98b
 "command": "cmd",
 "args": [
   "/c", "uvx",
-  "--from", "git+https://projects.blender.org/lab/blender_mcp.git@98b0e49d98321d321c7e631389200f513f765d59#subdirectory=mcp",
+  "--from", "git+https://projects.blender.org/lab/blender_mcp.git@v1.0.3#subdirectory=mcp",
   "blender-mcp"
 ]
 ```
@@ -39,7 +39,7 @@ uv tool install --from "git+https://projects.blender.org/lab/blender_mcp.git@98b
 注意点:
 
 - **初回起動はパッケージ取得で20〜30秒かかり、Claude Code の接続タイムアウト(30秒)に引っかかることがある**。失敗したら `/mcp` から再接続すれば2回目以降はキャッシュで数秒で起動する
-- コミットハッシュ(`@98b0e49...`)は必ず付けること。付けないと起動のたびに上流の更新チェックが走り、上流にコミットが入ったタイミングで再インストール(≒タイムアウト)が再発する
+- タグ(`@v1.0.3`)は必ず付けること。付けないと起動のたびに上流の更新チェックが走り、上流にコミットが入ったタイミングで再インストール(≒タイムアウト)が再発する
 
 ## トラブルシューティング
 
